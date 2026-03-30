@@ -1,0 +1,539 @@
+<!-- templates/projects.html - Enhanced Data Services & Projects Showcase -->
+{% extends "base.html" %}
+
+{% block content %}
+<section class="projects-section py-5">
+    <div class="container">
+        <!-- Hero Section for Services -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="services-hero bg-gradient-primary text-white rounded-4 p-5 text-center">
+                    <h1 class="display-4 fw-bold mb-3">Data Analytics Services</h1>
+                    <p class="lead mb-0">Transform your raw data into actionable business insights</p>
+                    <div class="row mt-4">
+                        <div class="col-md-3 col-6">
+                            <div class="service-stat">
+                                <i class="fas fa-database fa-2x"></i>
+                                <h3 class="mt-2 mb-0">50+</h3>
+                                <small>Data Sources</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="service-stat">
+                                <i class="fas fa-chart-line fa-2x"></i>
+                                <h3 class="mt-2 mb-0">1000+</h3>
+                                <small>Reports Generated</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="service-stat">
+                                <i class="fas fa-clock fa-2x"></i>
+                                <h3 class="mt-2 mb-0">24/7</h3>
+                                <small>Data Support</small>
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-6">
+                            <div class="service-stat">
+                                <i class="fas fa-smile fa-2x"></i>
+                                <h3 class="mt-2 mb-0">100%</h3>
+                                <small>Client Satisfaction</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Services I Can Provide - Interactive Section -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4">
+                    <i class="fas fa-chart-pie text-primary me-2"></i>
+                    Data Analytics Services I Provide
+                </h2>
+                <p class="text-center text-muted mb-5">Comprehensive data solutions for your business needs</p>
+            </div>
+        </div>
+
+        <!-- Service Categories -->
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="service-card h-100 text-center p-4">
+                    <div class="service-icon bg-primary text-white rounded-circle mb-3">
+                        <i class="fas fa-chart-line fa-2x"></i>
+                    </div>
+                    <h4>Sales Data Analytics</h4>
+                    <p>Sales performance tracking, revenue analysis, customer behavior patterns, and sales forecasting.</p>
+                    <div class="service-features">
+                        <span class="badge bg-primary">Sales Reports</span>
+                        <span class="badge bg-primary">Revenue Analysis</span>
+                        <span class="badge bg-primary">Forecasting</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card h-100 text-center p-4">
+                    <div class="service-icon bg-success text-white rounded-circle mb-3">
+                        <i class="fas fa-coins fa-2x"></i>
+                    </div>
+                    <h4>Finance & Accounting</h4>
+                    <p>Financial statement analysis, expense tracking, budget forecasting, and profit margin analysis.</p>
+                    <div class="service-features">
+                        <span class="badge bg-success">P&L Analysis</span>
+                        <span class="badge bg-success">Budget Tracking</span>
+                        <span class="badge bg-success">Cash Flow</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card h-100 text-center p-4">
+                    <div class="service-icon bg-info text-white rounded-circle mb-3">
+                        <i class="fas fa-users fa-2x"></i>
+                    </div>
+                    <h4>Customer Analytics</h4>
+                    <p>Customer segmentation, behavior analysis, retention metrics, and lifetime value prediction.</p>
+                    <div class="service-features">
+                        <span class="badge bg-info">Segmentation</span>
+                        <span class="badge bg-info">Retention</span>
+                        <span class="badge bg-info">CLV</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card h-100 text-center p-4">
+                    <div class="service-icon bg-warning text-white rounded-circle mb-3">
+                        <i class="fas fa-industry fa-2x"></i>
+                    </div>
+                    <h4>Production Data</h4>
+                    <p>Production efficiency analysis, quality control metrics, and operational performance tracking.</p>
+                    <div class="service-features">
+                        <span class="badge bg-warning">Efficiency</span>
+                        <span class="badge bg-warning">Quality Control</span>
+                        <span class="badge bg-warning">OEE</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card h-100 text-center p-4">
+                    <div class="service-icon bg-danger text-white rounded-circle mb-3">
+                        <i class="fas fa-database fa-2x"></i>
+                    </div>
+                    <h4>Data Warehousing</h4>
+                    <p>ETL pipelines, data integration, data modeling, and centralized data storage solutions.</p>
+                    <div class="service-features">
+                        <span class="badge bg-danger">ETL</span>
+                        <span class="badge bg-danger">Data Modeling</span>
+                        <span class="badge bg-danger">Integration</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="service-card h-100 text-center p-4">
+                    <div class="service-icon bg-dark text-white rounded-circle mb-3">
+                        <i class="fas fa-chart-simple fa-2x"></i>
+                    </div>
+                    <h4>Business Intelligence</h4>
+                    <p>Interactive dashboards, KPI tracking, real-time reporting, and data visualization.</p>
+                    <div class="service-features">
+                        <span class="badge bg-dark">Dashboards</span>
+                        <span class="badge bg-dark">KPIs</span>
+                        <span class="badge bg-dark">Reporting</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Data Processing Capabilities - Animated Bar Chart -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body p-4">
+                        <h3 class="card-title text-center mb-4">
+                            <i class="fas fa-chart-bar text-primary me-2"></i>
+                            Data Processing Capabilities
+                        </h3>
+                        <canvas id="dataProcessingChart" style="max-height: 400px; width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- What Data I Can Analyze - Interactive Grid -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4">
+                    <i class="fas fa-chart-simple text-primary me-2"></i>
+                    What Data Can I Analyze For You?
+                </h2>
+                <p class="text-center text-muted mb-5">Every business generates data - I help you make sense of it all</p>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="data-card p-4">
+                    <div class="data-icon">
+                        <i class="fas fa-chart-line fa-3x text-primary"></i>
+                    </div>
+                    <h4 class="mt-3">Sales Data</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Sales Performance Reports</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Revenue Trends & Forecasting</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Product Performance Analysis</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Sales Team KPIs</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Regional Sales Comparison</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="data-card p-4">
+                    <div class="data-icon">
+                        <i class="fas fa-coins fa-3x text-success"></i>
+                    </div>
+                    <h4 class="mt-3">Account & Finance Data</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Profit & Loss Statements</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Balance Sheet Analysis</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Expense Tracking & Optimization</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Budget vs Actual Analysis</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Cash Flow Forecasting</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="data-card p-4">
+                    <div class="data-icon">
+                        <i class="fas fa-industry fa-3x text-warning"></i>
+                    </div>
+                    <h4 class="mt-3">Production Data</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Production Efficiency Metrics</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Quality Control Analysis</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Machine Utilization Reports</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Inventory Turnover Analysis</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Supply Chain Optimization</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="data-card p-4">
+                    <div class="data-icon">
+                        <i class="fas fa-chart-pie fa-3x text-info"></i>
+                    </div>
+                    <h4 class="mt-3">Business Intelligence</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Interactive Dashboards</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Real-time KPI Tracking</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Data Visualization</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Executive Reports</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Performance Metrics</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="data-card p-4">
+                    <div class="data-icon">
+                        <i class="fas fa-database fa-3x text-danger"></i>
+                    </div>
+                    <h4 class="mt-3">Data Warehousing</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>ETL Pipeline Development</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Data Integration Services</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Data Modeling & Design</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Centralized Data Storage</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Data Quality Assurance</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-4 mb-4">
+                <div class="data-card p-4">
+                    <div class="data-icon">
+                        <i class="fas fa-microchip fa-3x text-secondary"></i>
+                    </div>
+                    <h4 class="mt-3">Data Mining & Modeling</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Predictive Analytics</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Pattern Recognition</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Statistical Modeling</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Machine Learning Models</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Data Clustering & Segmentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Portfolio Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h2 class="text-center mb-4">
+                    <i class="fas fa-folder-open text-primary me-2"></i>
+                    Featured Projects
+                </h2>
+                <p class="text-center text-muted mb-5">Real-world implementations of data analytics solutions</p>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 project-card shadow-sm">
+                    <img src="{{ url_for('static', filename='images/mujakkir_portfolio_home.png') }}" class="card-img-top" alt="Sales Dashboard">
+                    <div class="card-body">
+                        <h5 class="card-title">Personal Portfolio Dashboard</h5>
+                        <p class="card-text">Interactive portfolio dashboard showcasing professional experience and project portfolio.</p>
+                        <div class="tech-stack mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-secondary">Flask</span>
+                            <span class="badge bg-info">CSS , JavaScript</span>
+                        </div>
+                        <a href="#" class="btn btn-sm btn-outline-primary">View Project</a>
+                        <a href="https://github.com/mujakkirdv" target="_blank" class="btn btn-sm btn-outline-dark"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 project-card shadow-sm">
+                    <img src="{{ url_for('static', filename='images/sales_and_customer.png') }}" class="card-img-top" alt="Sales Analytics">
+                    <div class="card-body">
+                        <h5 class="card-title">Sales & Deposit Analytics Dashboard</h5>
+                        <p class="card-text">Comprehensive dashboard for tracking sales performance, deposit analytics, and key business metrics.</p>
+                        <div class="tech-stack mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-secondary">Streamlit</span>
+                            <span class="badge bg-success">Plotly</span>
+                        </div>
+                        <a href="https://hellofinance.streamlit.app/" target="_blank" class="btn btn-sm btn-outline-primary">Live Demo</a>
+                        <a href="https://github.com/mujakkirdv" target="_blank" class="btn btn-sm btn-outline-dark"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 project-card shadow-sm">
+                    <img src="{{ url_for('static', filename='images/financial_analysis.png') }}" class="card-img-top" alt="Financial Analysis">
+                    <div class="card-body">
+                        <h5 class="card-title">Financial Statement & Expense Analysis</h5>
+                        <p class="card-text">System for analyzing financial statements and tracking expenses with interactive visualizations.</p>
+                        <div class="tech-stack mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-secondary">Streamlit</span>
+                            <span class="badge bg-warning">Excel</span>
+                        </div>
+                        <a href="https://hellofinance.streamlit.app/" target="_blank" class="btn btn-sm btn-outline-primary">Live Demo</a>
+                        <a href="#" class="btn btn-sm btn-outline-dark"><i class="fab fa-github"></i> Source</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Call to Action -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="cta-section text-center p-5 rounded-4" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                    <h3 class="text-white mb-3">Ready to Transform Your Data?</h3>
+                    <p class="text-white-50 mb-4">Let's discuss how I can help you leverage your data for better business decisions</p>
+                    <a href="{{ url_for('contact') }}" class="btn btn-light btn-lg">
+                        <i class="fas fa-envelope me-2"></i>Contact Me Today
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.services-hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.service-stat {
+    text-align: center;
+    padding: 10px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.service-stat:last-child {
+    border-right: none;
+}
+
+.service-card {
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.service-features {
+    margin-top: 15px;
+}
+
+.service-features .badge {
+    margin: 3px;
+    padding: 5px 10px;
+}
+
+.data-card {
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    height: 100%;
+}
+
+.data-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.data-icon {
+    text-align: center;
+}
+
+.data-card ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.data-card ul li:last-child {
+    border-bottom: none;
+}
+
+.project-card {
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.project-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.tech-stack .badge {
+    margin-right: 5px;
+    padding: 5px 10px;
+}
+
+.cta-section {
+    transition: transform 0.3s ease;
+}
+
+.cta-section:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .service-stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        margin-bottom: 15px;
+    }
+    
+    .service-stat:last-child {
+        border-bottom: none;
+    }
+}
+</style>
+
+<!-- Chart.js for Data Processing Visualization -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Data Processing Capabilities Chart
+    const ctx = document.getElementById('dataProcessingChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Data Collection', 'Data Cleaning', 'Data Analysis', 'Data Mining', 'Data Modeling', 'Data Visualization', 'Reporting', 'Data Warehousing'],
+            datasets: [{
+                label: 'Processing Capability (%)',
+                data: [95, 92, 90, 88, 85, 95, 93, 87],
+                backgroundColor: [
+                    'rgba(102, 126, 234, 0.8)',
+                    'rgba(118, 75, 162, 0.8)',
+                    'rgba(72, 187, 120, 0.8)',
+                    'rgba(237, 137, 54, 0.8)',
+                    'rgba(49, 130, 206, 0.8)',
+                    'rgba(214, 53, 107, 0.8)',
+                    'rgba(111, 66, 193, 0.8)',
+                    'rgba(23, 162, 184, 0.8)'
+                ],
+                borderColor: 'white',
+                borderWidth: 2,
+                borderRadius: 10,
+                animation: {
+                    duration: 2000,
+                    easing: 'easeInOutQuart',
+                    delay: (context) => context.dataIndex * 100
+                }
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: {
+                    position: 'top',
+                    labels: { font: { size: 12 } }
+                },
+                tooltip: {
+                    callbacks: {
+                        label: (context) => `${context.dataset.label}: ${context.raw}%`
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    title: {
+                        display: true,
+                        text: 'Capability Level (%)',
+                        font: { size: 12 }
+                    },
+                    ticks: {
+                        callback: (value) => value + '%'
+                    }
+                },
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Data Processing Stages',
+                        font: { size: 12 }
+                    },
+                    ticks: {
+                        autoSkip: false,
+                        maxRotation: 45,
+                        minRotation: 45
+                    }
+                }
+            }
+        }
+    });
+});
+</script>
+{% endblock %}

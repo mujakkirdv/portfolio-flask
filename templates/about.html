@@ -1,0 +1,592 @@
+<!-- templates/about.html - Enhanced Interactive Data Analyst About Page -->
+{% extends "base.html" %}
+
+{% block content %}
+<section class="about-section py-5">
+    <div class="container">
+        <!-- Profile Header with Stats -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="profile-header-card bg-gradient-primary text-white rounded-4 p-5 shadow-lg">
+                    <div class="row align-items-center">
+                        <div class="col-md-3 text-center">
+                            <img src="{{ url_for('static', filename='images/profile.png') }}" alt="Mujakkir Ahmad" class="img-fluid rounded-circle profile-large-img shadow-lg" style="width: 180px; height: 180px; object-fit: cover; border: 4px solid white;">
+                        </div>
+                        <div class="col-md-9">
+                            <h1 class="display-4 fw-bold">Mujakkir Ahmad</h1>
+                            <h3 class="mb-3">Data Analyst | MIS & Analytics Professional</h3>
+                            <div class="row mt-4">
+                                <div class="col-md-3">
+                                    <div class="stat-badge">
+                                        <i class="fas fa-chart-line fa-2x"></i>
+                                        <h4 class="mb-0 mt-2 counter-stat" data-target="50">0</h4>
+                                        <small>Projects</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-badge">
+                                        <i class="fas fa-code fa-2x"></i>
+                                        <h4 class="mb-0 mt-2 counter-stat" data-target="8">0</h4>
+                                        <small>Technologies</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-badge">
+                                        <i class="fas fa-trophy fa-2x"></i>
+                                        <h4 class="mb-0 mt-2 counter-stat" data-target="15">0</h4>
+                                        <small>Achievements</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="stat-badge">
+                                        <i class="fas fa-users fa-2x"></i>
+                                        <h4 class="mb-0 mt-2 counter-stat" data-target="20">0</h4>
+                                        <small>Clients</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Left Sidebar - Contact & Skills -->
+            <div class="col-lg-4 mb-4">
+                <!-- Contact Card -->
+                <div class="card shadow-lg border-0 rounded-4 mb-4">
+                    <div class="card-body p-4">
+                        <h4 class="card-title mb-4">
+                            <i class="fas fa-address-card text-primary me-2"></i>Contact Info
+                        </h4>
+                        <div class="contact-info">
+                            <div class="contact-item mb-3">
+                                <i class="fas fa-map-marker-alt fa-fw text-primary me-3"></i>
+                                <div>
+                                    <strong>Location</strong><br>
+                                    <span class="text-muted">Dhaka, Bangladesh</span>
+                                </div>
+                            </div>
+                            <div class="contact-item mb-3">
+                                <i class="fas fa-phone fa-fw text-primary me-3"></i>
+                                <div>
+                                    <strong>Phone</strong><br>
+                                    <span class="text-muted">+8801787933422</span>
+                                </div>
+                            </div>
+                            <div class="contact-item mb-3">
+                                <i class="fas fa-envelope fa-fw text-primary me-3"></i>
+                                <div>
+                                    <strong>Email</strong><br>
+                                    <span class="text-muted">mujakkir.dv@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="social-links mt-4">
+                                <a href="https://www.linkedin.com/in/mujakkir-dv/" target="_blank" class="btn btn-outline-primary me-2">
+                                    <i class="fab fa-linkedin"></i> LinkedIn
+                                </a>
+                                <a href="https://github.com/mujakkirdv" target="_blank" class="btn btn-outline-dark">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Skills Radar Chart -->
+                <div class="card shadow-lg border-0 rounded-4 mb-4">
+                    <div class="card-body p-4">
+                        <h4 class="card-title mb-4">
+                            <i class="fas fa-chart-radar text-primary me-2"></i>Skills Radar
+                        </h4>
+                        <canvas id="skillsRadarChart" style="max-height: 300px; width: 100%;"></canvas>
+                    </div>
+                </div>
+
+                <!-- Tools Proficiency -->
+                <div class="card shadow-lg border-0 rounded-4">
+                    <div class="card-body p-4">
+                        <h4 class="card-title mb-4">
+                            <i class="fas fa-tools text-primary me-2"></i>Tools Proficiency
+                        </h4>
+                        <div class="tools-progress">
+                            <div class="mb-3">
+                                <label class="d-flex justify-content-between">
+                                    <span>Python</span>
+                                    <span class="text-primary">95%</span>
+                                </label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" style="width: 95%; animation: slideIn 1s ease-out;"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="d-flex justify-content-between">
+                                    <span>PostgreSQL</span>
+                                    <span class="text-info">88%</span>
+                                </label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" style="width: 88%; animation: slideIn 1s ease-out 0.1s;"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="d-flex justify-content-between">
+                                    <span>Power BI</span>
+                                    <span class="text-success">85%</span>
+                                </label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" style="width: 85%; animation: slideIn 1s ease-out 0.2s;"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="d-flex justify-content-between">
+                                    <span>Tableau</span>
+                                    <span class="text-warning">82%</span>
+                                </label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" style="width: 82%; animation: slideIn 1s ease-out 0.3s;"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="d-flex justify-content-between">
+                                    <span>SPSS</span>
+                                    <span class="text-danger">80%</span>
+                                </label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" style="width: 80%; animation: slideIn 1s ease-out 0.4s;"></div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="d-flex justify-content-between">
+                                    <span>KoboToolbox</span>
+                                    <span class="text-secondary">78%</span>
+                                </label>
+                                <div class="progress">
+                                    <div class="progress-bar bg-secondary" style="width: 78%; animation: slideIn 1s ease-out 0.5s;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Content - About & Experience -->
+            <div class="col-lg-8">
+                <!-- About Me Card -->
+                <div class="card shadow-lg border-0 rounded-4 mb-4">
+                    <div class="card-body p-4">
+                        <h2 class="mb-4">
+                            <i class="fas fa-user-circle text-primary me-2"></i>About Me
+                        </h2>
+                        <p class="lead">Data-driven MIS and Data Analytics professional with experience in sales reporting, retail operations, and database management.</p>
+                        
+                        <div class="row mt-4">
+                            <div class="col-md-6">
+                                <div class="info-box p-3 rounded-3 mb-3" style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);">
+                                    <i class="fas fa-graduation-cap text-primary me-2"></i>
+                                    <strong>Education:</strong> Postgraduate Diploma in Data Analytics
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="info-box p-3 rounded-3 mb-3" style="background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);">
+                                    <i class="fas fa-briefcase text-primary me-2"></i>
+                                    <strong>Experience:</strong> 5+ Years Professional
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h4 class="mt-4">Career Objective</h4>
+                        <p>Seeking a responsible position in a reputable organization where I can apply my knowledge of data management, sales reporting, business operations, and analytical tools to contribute to organizational success and improve operational performance.</p>
+                        
+                        <h4 class="mt-4">Professional Summary</h4>
+                        <p>Skilled in analyzing business and sales data using Python, Pandas, NumPy, and Matplotlib, and experienced in working with PostgreSQL databases for structured data management. Proficient in Google Sheets, Microsoft Excel, SPSS, and KoboToolbox for data collection, analysis, and reporting.</p>
+                    </div>
+                </div>
+
+                <!-- Work Experience Timeline -->
+                <div class="card shadow-lg border-0 rounded-4 mb-4">
+                    <div class="card-body p-4">
+                        <h2 class="mb-4">
+                            <i class="fas fa-briefcase text-primary me-2"></i>Work Experience
+                        </h2>
+                        
+                        <div class="timeline">
+                            <div class="timeline-item mb-4">
+                                <div class="timeline-badge bg-primary">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="timeline-content card p-3">
+                                    <h5>MIS Officer</h5>
+                                    <p class="text-muted mb-2">
+                                        <i class="fas fa-calendar-alt me-2"></i>June 2024 - November 2025
+                                        <span class="ms-3"><i class="fas fa-building me-2"></i>WELBURG, Agargaon, Dhaka</span>
+                                    </p>
+                                    <ul>
+                                        <li>Manage sales and retail data reports using Google Sheets and internal systems</li>
+                                        <li>Maintain retail product database and employee records</li>
+                                        <li>Prepare daily and monthly sales performance reports</li>
+                                        <li>Support management with data analysis and operational reports</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item mb-4">
+                                <div class="timeline-badge bg-success">
+                                    <i class="fas fa-chart-bar"></i>
+                                </div>
+                                <div class="timeline-content card p-3">
+                                    <h5>Executive - Sales and Inventory</h5>
+                                    <p class="text-muted mb-2">
+                                        <i class="fas fa-calendar-alt me-2"></i>February 2022 - March 2024
+                                        <span class="ms-3"><i class="fas fa-building me-2"></i>Popular Diagnostic and Hospital Ltd</span>
+                                    </p>
+                                    <ul>
+                                        <li>Managed inventory records and stock updates for medical products</li>
+                                        <li>Prepared sales reports and product availability reports</li>
+                                        <li>Coordinated with sales teams and store departments for stock management</li>
+                                        <li>Ensured accurate data entry and inventory tracking</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
+                            <div class="timeline-item">
+                                <div class="timeline-badge bg-info">
+                                    <i class="fas fa-industry"></i>
+                                </div>
+                                <div class="timeline-content card p-3">
+                                    <h5>Production Supervisor & Machine Operator</h5>
+                                    <p class="text-muted mb-2">
+                                        <i class="fas fa-calendar-alt me-2"></i>April 2019 - January 2022
+                                        <span class="ms-3"><i class="fas fa-building me-2"></i>Libra Pharmaceutical Ltd</span>
+                                    </p>
+                                    <ul>
+                                        <li>Supervised production processes for medical device products</li>
+                                        <li>Operated and maintained manufacturing machines</li>
+                                        <li>Ensured production quality according to industry standards</li>
+                                        <li>Managed workflow and supported production team operations</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education & Languages -->
+                <div class="row">
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-lg border-0 rounded-4 h-100">
+                            <div class="card-body p-4">
+                                <h4 class="mb-4">
+                                    <i class="fas fa-graduation-cap text-primary me-2"></i>Education
+                                </h4>
+                                <div class="education-item mb-3">
+                                    <div class="d-flex align-items-start">
+                                        <i class="fas fa-certificate text-primary mt-1 me-3"></i>
+                                        <div>
+                                            <h6 class="mb-1">Postgraduate Diploma in Data Analytics</h6>
+                                            <p class="text-muted small">National University of Bangladesh | 2025 - 2026</p>
+                                            <span class="badge bg-primary">Ongoing</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="education-item">
+                                    <div class="d-flex align-items-start">
+                                        <i class="fas fa-certificate text-primary mt-1 me-3"></i>
+                                        <div>
+                                            <h6 class="mb-1">Bachelor of Business Administration (BBA)</h6>
+                                            <p class="text-muted small">Brindaban Government College | CGPA: 3.13 | 2022</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6 mb-4">
+                        <div class="card shadow-lg border-0 rounded-4 h-100">
+                            <div class="card-body p-4">
+                                <h4 class="mb-4">
+                                    <i class="fas fa-language text-primary me-2"></i>Languages
+                                </h4>
+                                <div class="language-item mb-3">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <strong>Bengali</strong>
+                                        <span class="text-primary">Native</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-primary" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                                <div class="language-item">
+                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                        <strong>English</strong>
+                                        <span class="text-success">Professional Working Proficiency</span>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar bg-success" style="width: 85%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.profile-header-card {
+    background: linear-gradient(135deg, #1d1e1c 0%, #764ba2 100%);
+}
+
+.stat-badge {
+    text-align: center;
+    padding: 10px;
+    border-right: 1px solid rgba(255,255,255,0.2);
+}
+
+.stat-badge:last-child {
+    border-right: none;
+}
+
+.stat-badge h4 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.contact-item {
+    transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+    transform: translateX(5px);
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-badge {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 1;
+}
+
+.timeline-badge i {
+    font-size: 1.2rem;
+}
+
+.timeline-content {
+    margin-left: 20px;
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: translateX(10px);
+}
+
+.timeline-content ul {
+    margin-bottom: 0;
+    padding-left: 20px;
+}
+
+.timeline-content ul li {
+    margin-bottom: 5px;
+}
+
+/* Progress Bars */
+.progress {
+    height: 8px;
+    border-radius: 10px;
+    background-color: #e9ecef;
+    overflow: hidden;
+}
+
+.progress-bar {
+    border-radius: 10px;
+    transition: width 1.5s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Info Boxes */
+.info-box {
+    transition: transform 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-3px);
+}
+
+/* Counter Animation */
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.counter-stat {
+    animation: countUp 0.8s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .timeline {
+        padding-left: 20px;
+    }
+    
+    .timeline-badge {
+        width: 30px;
+        height: 30px;
+        left: -20px;
+    }
+    
+    .timeline-badge i {
+        font-size: 0.9rem;
+    }
+    
+    .timeline-content {
+        margin-left: 10px;
+    }
+    
+    .stat-badge {
+        border-right: none;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+        margin-bottom: 10px;
+    }
+    
+    .stat-badge:last-child {
+        border-bottom: none;
+    }
+}
+</style>
+
+<!-- Chart.js for Radar Chart -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Skills Radar Chart
+    const radarCtx = document.getElementById('skillsRadarChart').getContext('2d');
+    new Chart(radarCtx, {
+        type: 'radar',
+        data: {
+            labels: ['Python', 'SQL', 'Data Viz', 'Statistics', 'ML Basics', 'BI Tools', 'Reporting', 'ETL'],
+            datasets: [{
+                label: 'Proficiency Level',
+                data: [95, 88, 85, 82, 75, 87, 90, 80],
+                backgroundColor: 'rgba(102, 126, 234, 0.2)',
+                borderColor: 'rgba(102, 126, 234, 1)',
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(102, 126, 234, 1)',
+                pointBorderColor: '#fff',
+                pointHoverBackgroundColor: '#fff',
+                pointHoverBorderColor: 'rgba(102, 126, 234, 1)',
+                pointRadius: 4,
+                pointHoverRadius: 6
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: {
+                r: {
+                    beginAtZero: true,
+                    max: 100,
+                    ticks: {
+                        stepSize: 20,
+                        backdropColor: 'transparent'
+                    },
+                    grid: {
+                        color: 'rgba(0,0,0,0.1)'
+                    }
+                }
+            },
+            plugins: {
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            return `${context.label}: ${context.raw}%`;
+                        }
+                    }
+                },
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        font: { size: 12 }
+                    }
+                }
+            }
+        }
+    });
+
+    // Animate counter statistics
+    const animateCounter = (element) => {
+        const target = parseInt(element.getAttribute('data-target'));
+        let current = 0;
+        const increment = target / 50;
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                element.textContent = Math.ceil(current);
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = target;
+            }
+        };
+        updateCounter();
+    };
+
+    // Trigger counter animation when in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                animateCounter(counter);
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.counter-stat').forEach(counter => observer.observe(counter));
+});
+</script>
+{% endblock %}

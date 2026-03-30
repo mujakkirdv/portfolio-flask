@@ -1,0 +1,615 @@
+<!-- templates/home.html - Enhanced with Animated Charts & Interactive Visualizations -->
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section bg-gradient-primary text-white py-5">
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <div class="col-lg-8">
+                <h1 class="display-4 fw-bold">Hi, I'm <span class="text-warning">Mujakkir Ahmad</span></h1>
+                <h2 class="h3 mb-4">Data Analyst | Data Analytics | MIS & Sales Analytics Professional</h2>
+                <p class="lead mb-4">Turning raw data into actionable insights. Expert in Python, PostgreSQL, Power BI, Tableau, KOBO, IBM SPSS, Excel.</p>
+                <div class="d-flex gap-3">
+                    <a href="{{ url_for('about') }}" class="btn btn-light btn-lg">About Me</a>
+                    <a href="{{ url_for('contact') }}" class="btn btn-outline-light btn-lg">Contact Me</a>
+                </div>
+            </div>
+            <div class="col-lg-4 text-center">
+                <img src="{{ url_for('static', filename='images/profile_home.png') }}" alt="Mujakkir Ahmad" class="img-fluid rounded-circle profile-img shadow-lg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Quick Stats with Animation -->
+<section class="stats-section py-5 bg-light">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-3 mb-4">
+                <div class="stat-card">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h3 class="counter" data-target="5">0+</h3>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stat-card">
+                    <i class="fas fa-database fa-3x text-primary mb-3"></i>
+                    <h3 class="counter" data-target="50">0+</h3>
+                    <p>Projects Completed</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stat-card">
+                    <i class="fas fa-chart-bar fa-3x text-primary mb-3"></i>
+                    <h3 class="counter" data-target="100">0+</h3>
+                    <p>Reports Generated</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="stat-card">
+                    <i class="fas fa-users fa-3x text-primary mb-3"></i>
+                    <h3 class="counter" data-target="20">0+</h3>
+                    <p>Happy Clients</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- My Work & Achievements - Animated Charts Section -->
+<section class="achievements-section py-5" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+    <div class="container">
+        <h2 class="text-center text-white mb-5">My Work & Achievements</h2>
+        
+        <!-- Tools Proficiency Bar Chart -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card bg-dark text-white shadow-lg border-0">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-4">
+                            <i class="fas fa-chart-bar text-primary me-2"></i>
+                            Technical Tools Proficiency
+                        </h4>
+                        <canvas id="toolsChart" width="400" height="200" style="max-height: 400px; width: 100%;"></canvas>
+                        <p class="text-center text-muted mt-3">
+                            <i class="fas fa-chart-simple"></i> Proficiency levels across different data analytics tools
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Performance Growth Line Chart & Metrics Row -->
+        <div class="row mb-5">
+            <div class="col-lg-7 mb-4">
+                <div class="card bg-dark text-white shadow-lg border-0 h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-4">
+                            <i class="fas fa-chart-line text-success me-2"></i>
+                            Career Growth Trajectory (2021-2025)
+                        </h4>
+                        <canvas id="growthChart" style="max-height: 350px; width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-5 mb-4">
+                <div class="card bg-dark text-white shadow-lg border-0 h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-4">
+                            <i class="fas fa-tachometer-alt text-warning me-2"></i>
+                            Key Achievement Metrics
+                        </h4>
+                        <canvas id="metricsGauge" style="max-height: 350px; width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project Impact Analysis -->
+        <div class="row">
+            <div class="col-12">
+                <div class="card bg-dark text-white shadow-lg border-0">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-4">
+                            <i class="fas fa-project-diagram text-info me-2"></i>
+                            Project Impact Analysis
+                        </h4>
+                        <canvas id="projectImpactChart" style="max-height: 400px; width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why People Choose Me - Interactive Section -->
+<section class="why-choose-me py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Why People Choose Me</h2>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <div class="card shadow-lg border-0 h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-4">
+                            <i class="fas fa-chart-pie text-primary me-2"></i>
+                            Skill Distribution
+                        </h4>
+                        <canvas id="skillPieChart" style="max-height: 350px; width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="card shadow-lg border-0 h-100">
+                    <div class="card-body">
+                        <h4 class="card-title text-center mb-4">
+                            <i class="fas fa-chart-radar text-info me-2"></i>
+                            Competency Radar
+                        </h4>
+                        <canvas id="radarChart" style="max-height: 350px; width: 100%;"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Value Proposition Cards with Animation -->
+        <div class="row mt-4">
+            <div class="col-md-3 mb-4">
+                <div class="value-card text-center p-4 rounded shadow-sm h-100">
+                    <i class="fas fa-chart-line fa-3x text-primary mb-3"></i>
+                    <h5>Data-Driven Decisions</h5>
+                    <div class="display-4 text-primary fw-bold" data-count="95">0%</div>
+                    <p class="text-muted">Accuracy in predictions</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="value-card text-center p-4 rounded shadow-sm h-100">
+                    <i class="fas fa-clock fa-3x text-success mb-3"></i>
+                    <h5>Faster Delivery</h5>
+                    <div class="display-4 text-success fw-bold" data-count="30">0%</div>
+                    <p class="text-muted">Quicker than industry avg</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="value-card text-center p-4 rounded shadow-sm h-100">
+                    <i class="fas fa-shield-alt fa-3x text-info mb-3"></i>
+                    <h5>Data Accuracy</h5>
+                    <div class="display-4 text-info fw-bold" data-count="99.9">0%</div>
+                    <p class="text-muted">Quality assurance rate</p>
+                </div>
+            </div>
+            <div class="col-md-3 mb-4">
+                <div class="value-card text-center p-4 rounded shadow-sm h-100">
+                    <i class="fas fa-handshake fa-3x text-warning mb-3"></i>
+                    <h5>Client Retention</h5>
+                    <div class="display-4 text-warning fw-bold" data-count="100">0%</div>
+                    <p class="text-muted">Satisfaction guarantee</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Skills Preview -->
+<section class="skills-preview py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Core Competencies</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="skill-category h-100 shadow-sm">
+                    <h4><i class="fas fa-code text-primary me-2"></i>Technical Skills</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Python (Pandas, NumPy, Matplotlib)</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>PostgreSQL & SQL</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Data Analysis & Visualization</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Google Sheets & Excel</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Statistical Analysis</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="skill-category h-100 shadow-sm">
+                    <h4><i class="fas fa-chart-pie text-primary me-2"></i>Tools & Platforms</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Power BI, Tableau</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Streamlit, GitHub</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>SPSS, KoboToolbox</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Jupyter Notebook, VS Code</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Docker, Git</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="skill-category h-100 shadow-sm">
+                    <h4><i class="fas fa-briefcase text-primary me-2"></i>Professional Skills</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Sales Reporting & MIS</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Inventory Management</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Data Entry & Cleaning</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Business Intelligence</li>
+                        <li><i class="fas fa-check-circle text-success me-2"></i>Project Management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.achievements-section .card, .why-choose-me .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.achievements-section .card:hover, .why-choose-me .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.value-card {
+    background: white;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.value-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.value-card .display-4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    animation: countUp 1s ease-out;
+}
+
+.skill-category {
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.skill-category ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.skill-category ul li:last-child {
+    border-bottom: none;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.proposition-item {
+    animation: slideIn 0.5s ease-out;
+}
+
+.value-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+</style>
+
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    
+    // 1. Tools Proficiency Bar Chart
+    const toolsCtx = document.getElementById('toolsChart').getContext('2d');
+    new Chart(toolsCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Python', 'Pandas', 'PostgreSQL','R', 'Power BI', 'Tableau', 'SPSS', 'Kobo', 'Excel'],
+            datasets: [{
+                label: 'Proficiency Level (%)',
+                data: [ 95, 90, 85, 70, 80, 75, 88, 82, 92 ],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 206, 86, 0.8)',
+                    'rgba(255, 100, 40, 0.8)',
+                    'rgba(75, 192, 192, 0.8)',
+                    'rgba(153, 102, 255, 0.8)',
+                    'rgba(255, 159, 64, 0.8)',
+                    'rgba(199, 199, 199, 0.8)',
+                    'rgba(83, 102, 255, 0.8)'
+                ],
+                borderColor: 'rgba(255, 255, 255, 1)',
+                borderWidth: 2,
+                borderRadius: 10,
+                animation: {
+                    duration: 2000,
+                    easing: 'easeInOutQuart',
+                    delay: (context) => context.dataIndex * 100
+                }
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: { labels: { color: 'white', font: { size: 14 } } },
+                tooltip: { callbacks: { label: (context) => `${context.raw}% proficiency` } }
+            },
+            scales: {
+                y: { 
+                    beginAtZero: true, 
+                    max: 100,
+                    grid: { color: 'rgba(255,255,255,0.1)' },
+                    ticks: { color: 'white', callback: (value) => value + '%' }
+                },
+                x: { ticks: { color: 'white', font: { size: 12 } }, grid: { display: false } }
+            }
+        }
+    });
+
+    // 2. Career Growth Line Chart
+    const growthCtx = document.getElementById('growthChart').getContext('2d');
+    new Chart(growthCtx, {
+        type: 'line',
+        data: {
+            labels: ['2021', '2022', '2023', '2024', '2025'],
+            datasets: [
+                {
+                    label: 'Skill Development',
+                    data: [60, 72, 82, 90, 95],
+                    borderColor: 'rgba(75, 192, 192, 1)',
+                    backgroundColor: 'rgba(75, 192, 192, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    pointBackgroundColor: 'rgba(75, 192, 192, 1)'
+                },
+                {
+                    label: 'Project Success Rate',
+                    data: [65, 75, 85, 92, 96],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(255, 99, 132, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    pointBackgroundColor: 'rgba(255, 99, 132, 1)'
+                },
+                {
+                    label: 'Client Satisfaction',
+                    data: [70, 78, 86, 94, 98],
+                    borderColor: 'rgba(255, 206, 86, 1)',
+                    backgroundColor: 'rgba(255, 206, 86, 0.1)',
+                    borderWidth: 3,
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 6,
+                    pointHoverRadius: 8,
+                    pointBackgroundColor: 'rgba(255, 206, 86, 1)'
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            animation: { duration: 2000, easing: 'easeInOutQuart' },
+            plugins: {
+                legend: { position: 'bottom', labels: { color: 'white', font: { size: 12 } } },
+                tooltip: { callbacks: { label: (context) => `${context.dataset.label}: ${context.raw}%` } }
+            },
+            scales: {
+                y: { 
+                    beginAtZero: true, 
+                    max: 100,
+                    grid: { color: 'rgba(255,255,255,0.1)' },
+                    ticks: { color: 'white', callback: (value) => value + '%' }
+                },
+                x: { ticks: { color: 'white' }, grid: { display: false } }
+            }
+        }
+    });
+
+    // 3. Project Impact Horizontal Bar Chart
+    const impactCtx = document.getElementById('projectImpactChart').getContext('2d');
+    new Chart(impactCtx, {
+        type: 'bar',
+        data: {
+            labels: ['Sales Dashboard', 'Financial Analysis', 'Customer Analytics', 'Transaction System', 'AI Dashboard', 'Inventory Mgmt'],
+            datasets: [
+                {
+                    label: 'Business Impact (%)',
+                    data: [88, 82, 92, 70, 85, 78],
+                    backgroundColor: 'rgba(54, 162, 235, 0.8)',
+                    borderColor: 'white',
+                    borderWidth: 1,
+                    borderRadius: 10,
+                    order: 1
+                },
+                {
+                    label: 'Complexity Level',
+                    data: [85, 70, 95, 65, 90, 75],
+                    backgroundColor: 'rgba(255, 99, 132, 0.8)',
+                    borderColor: 'white',
+                    borderWidth: 1,
+                    borderRadius: 10,
+                    order: 2
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            indexAxis: 'y',
+            animation: { duration: 2000, easing: 'easeOutBounce' },
+            plugins: {
+                legend: { position: 'top', labels: { color: 'white', font: { size: 12 } } },
+                tooltip: { callbacks: { label: (context) => `${context.dataset.label}: ${context.raw}%` } }
+            },
+            scales: {
+                x: { 
+                    max: 100,
+                    grid: { color: 'rgba(255,255,255,0.1)' },
+                    ticks: { color: 'white', callback: (value) => value + '%' }
+                },
+                y: { ticks: { color: 'white', font: { size: 11 } }, grid: { display: false } }
+            }
+        }
+    });
+
+    // 4. Skill Distribution Pie Chart
+    const pieCtx = document.getElementById('skillPieChart').getContext('2d');
+    new Chart(pieCtx, {
+        type: 'pie',
+        data: {
+            labels: ['Python & Analytics', 'SQL & Databases', 'BI Tools', 'Statistical Analysis', 'Data Collection', 'Reporting & MIS'],
+            datasets: [{
+                data: [30, 20, 18, 15, 10, 7],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.8)',
+                    'rgba(54, 162, 235, 0.8)',
+                    'rgba(255, 206, 86, 0.8)',
+                    'rgba(75, 192, 192, 0.8)',
+                    'rgba(153, 102, 255, 0.8)',
+                    'rgba(255, 159, 64, 0.8)'
+                ],
+                borderColor: 'white',
+                borderWidth: 2,
+                animation: { animateRotate: true, duration: 2000 }
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                legend: { position: 'bottom', labels: { font: { size: 11 } } },
+                tooltip: { callbacks: { label: (context) => `${context.label}: ${context.raw}%` } }
+            }
+        }
+    });
+
+    // 5. Radar Chart
+    const radarCtx = document.getElementById('radarChart').getContext('2d');
+    new Chart(radarCtx, {
+        type: 'radar',
+        data: {
+            labels: ['Technical Skills', 'Communication', 'Problem Solving', 'Business Acumen', 'Teamwork', 'Leadership'],
+            datasets: [{
+                label: 'Current Level',
+                data: [95, 88, 92, 85, 90, 82],
+                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                borderColor: 'rgba(54, 162, 235, 1)',
+                borderWidth: 2,
+                pointBackgroundColor: 'rgba(54, 162, 235, 1)',
+                pointBorderColor: 'white',
+                pointRadius: 5,
+                pointHoverRadius: 7,
+                animation: { duration: 2000 }
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            scales: { r: { beginAtZero: true, max: 100, ticks: { stepSize: 20 } } },
+            plugins: { tooltip: { callbacks: { label: (context) => `${context.label}: ${context.raw}` } } }
+        }
+    });
+
+    // 6. Metrics Gauge (Doughnut Chart)
+    const gaugeCtx = document.getElementById('metricsGauge').getContext('2d');
+    
+    // Create multiple doughnut charts for different metrics
+    const metricsData = {
+        datasets: [{
+            data: [88, 12],
+            backgroundColor: ['rgba(75, 192, 192, 0.8)', 'rgba(200, 200, 200, 0.2)'],
+            borderWidth: 0,
+            cutout: '70%',
+            borderRadius: 10
+        }]
+    };
+    
+    new Chart(gaugeCtx, {
+        type: 'doughnut',
+        data: metricsData,
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                tooltip: { callbacks: { label: () => 'Overall Performance: 88%' } },
+                legend: { display: false }
+            }
+        }
+    });
+    
+    // Add center text to gauge
+    const centerText = document.createElement('div');
+    centerText.style.position = 'absolute';
+    centerText.style.top = '50%';
+    centerText.style.left = '50%';
+    centerText.style.transform = 'translate(-50%, -50%)';
+    centerText.style.textAlign = 'center';
+    centerText.style.color = 'white';
+    centerText.innerHTML = '<div style="font-size: 28px; font-weight: bold;">88%</div><div style="font-size: 12px;">Performance</div>';
+    document.querySelector('#metricsGauge').parentElement.style.position = 'relative';
+    document.querySelector('#metricsGauge').parentElement.appendChild(centerText);
+
+    // Animate counter numbers
+    const counters = document.querySelectorAll('[data-count]');
+    const animateCounter = (counter) => {
+        const target = parseFloat(counter.getAttribute('data-count'));
+        let current = 0;
+        const increment = target / 50;
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                counter.textContent = Math.ceil(current) + (target.toString().includes('.') ? '%' : '%');
+                requestAnimationFrame(updateCounter);
+            } else {
+                counter.textContent = target + (target.toString().includes('.') ? '%' : '%');
+            }
+        };
+        updateCounter();
+    };
+    
+    // Trigger counter animation when in view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const counter = entry.target;
+                animateCounter(counter);
+                observer.unobserve(counter);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    document.querySelectorAll('[data-count]').forEach(counter => observer.observe(counter));
+});
+</script>
+{% endblock %}
